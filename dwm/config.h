@@ -2,17 +2,17 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 5;	/* gaps size between windows */
+static const unsigned int gappx     = 25;	/* gaps size between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Terminus:size=13" };
-static const char dmenufont[]       = "Terminus:size=13";
+static const char *fonts[]          = { "monospace:size=13" };
+static const char dmenufont[]       = "monospace:size=13";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#444444";
-static const char col_cyan[]        = "#cf6a32";
+static const char col_gray4[]       = "#eeeeee";
+static const char col_cyan[]        = "#231e3d";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -97,6 +97,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY|ShiftMask,		XK_s,	   spawn,	   SHCMD("scrot") },
+	{ MODKEY,                       XK_e,      spawn,          SHCMD("emacsclient -c -a 'emacs'") },
 };
 
 /* button definitions */
